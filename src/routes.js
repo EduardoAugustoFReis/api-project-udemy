@@ -1,6 +1,9 @@
 const {Router} = require("express");
+const UserController = require("./apps/controllers/userController");
 
 const routes = Router();
+
+routes.post("/users", UserController.create);
 
 routes.get("/health", (request, response) =>{
 
